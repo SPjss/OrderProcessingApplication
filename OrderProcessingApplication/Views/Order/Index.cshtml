@@ -1,0 +1,14 @@
+﻿@model OrderProcessingApplication.Models.Order
+
+<form method="post" asp-action="ProcessOrder">
+    <label>Order Amount:</label>
+    <input type="number" asp-for="Amount" required />
+
+    <label>Customer Type:</label>
+    <select asp-for="CustomerType">
+        <option value="New">New</option>
+        <option value="Loyal">Loyal</option>
+    </select>
+
+    <button type="submit">Submit</button>
+</form>
